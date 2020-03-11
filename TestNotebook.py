@@ -26,6 +26,12 @@ dataset_url = 'http://mlr.cs.umass.edu/ml/machine-learning-databases/wine-qualit
 data = pd.read_csv(dataset_url, sep=';')
 
 
+# In[3]:
+
+
+print('this is the world')
+
+
 # In[14]:
 
 
