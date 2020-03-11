@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# # Test Notebook
+
+# In[12]:
 
 
 import numpy as np
@@ -17,45 +19,39 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error, r2_score
 
 
-# In[2]:
+# In[13]:
 
 
 dataset_url = 'http://mlr.cs.umass.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'
 data = pd.read_csv(dataset_url, sep=';')
 
 
-# In[5]:
-
-
-data.columns
-
-
-# In[6]:
+# In[14]:
 
 
 y = data.quality
 X = data.drop(columns=['pH', 'sulphates'])
 X_train, X_test, y_train, y_test = train_test_split(X, y, 
-                                                    test_size=0.2, 
+                                                    test_size=0.8, 
                                                     random_state=123, 
                                                     stratify=y)
 
 
-# In[7]:
+# In[1]:
+
+
+print('hello_world')
+
+
+# In[15]:
 
 
 plt.plot(X_train, y_train)
 plt.show()
 
 
-# In[7]:
+# In[16]:
 
 
 print('{}, {}'.format(X_train.shape, y_train.shape))
-
-
-# In[ ]:
-
-
-
 
